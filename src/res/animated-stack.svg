@@ -1,0 +1,39 @@
+<svg
+                width="116"
+                height="127"
+                viewBox="0 0 116 127"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="animatedStack"
+            >
+                <linearGradient id="gradient">
+                    <stop className="main-stop" offset="0%" />
+                    <stop className="alt-stop" offset="100%" />
+                </linearGradient>
+                <g id="g-animated-stack-svg">
+                    <rect id="stack1" y="109.41" width="90" height="17" />
+                    <rect
+                        id="stack2"
+                        x="7.59216"
+                        y="68.7416"
+                        width="90"
+                        height="17"
+                        transform="rotate(15 7.59216 68.7416)"
+                    />
+                    <rect
+                        id="stack3"
+                        x="25.4514"
+                        y="31.4238"
+                        width="90"
+                        height="17"
+                        transform="rotate(30 25.4514 31.4238)"
+                    />
+                    <rect
+                        id="stack4"
+                        x="52.3607"
+                        width="90"
+                        height="17"
+                        transform="rotate(45 52.3607 0)"
+                    />
+                </g>
+            </svg>
