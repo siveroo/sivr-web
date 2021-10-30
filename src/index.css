@@ -1,13 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+:root {
+    --color-white: white;
+    --color-orange-primary: #617000;
+    --color-orange-secondary: #ff9d42;
+    --color-gray-primary: hsl(0, 0%, 20%);
+    --color-gray-secondary: hsl(0, 0%, 30%);
+    --color-green-primary: hsl(87, 65%, 24%);
+    --color-green-secondary: hsl(86, 100%, 26%);
+
+    --color-linkedin: #0a66c2;
+    --color-twitter: #1da1f2;
+    --color-github: white;
+    --color-discord: #5865f2;
+
+    --color-react: #61dafb;
+    --color-nodejs: #8fd200;
+    --color-mongodb: #47a248;
+    --color-typescript: #3178c6;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #121212;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 15vw;
+    font-family: Roboto, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+h1.websiteLogo {
+    color: var(--color-white);
+}
+
+.headerNavigation {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.headerNavigationItem > a {
+    color: var(--color-orange-primary);
+    font-size: 28px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.headerNavigationItem.active {
+    background-color: var(--color-orange-primary);
+    border-radius: 8px;
+    padding: 4px 12px;
+}
+
+.headerNavigationItem.active > a {
+    color: var(--color-white);
+}
+
+/* ABOUT SECTION */
+.about {
+    margin-top: 4rem;
+    padding: 0 18vw;
+    display: grid;
+    grid-template-columns: 3fr 5fr 2fr;
+    column-gap: 2rem;
+}
+
+/* Left Section */
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts {
+    color: var(--color-gray-secondary);
+
+    width: 60%;
+    display: flex;
+    column-gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+
+    cursor: pointer;
+}
+
+.contactsItem {
+    fill: var(--color-gray-secondary);
+}
+
+/* Right Section */
+.introduction {
+    color: white;
+    border-left: 1px solid white;
+    padding-left: 2rem;
+}
+
+.introduction h1 {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+}
+
+.introduction p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 55ch;
+}
+
+svg.animatedStack .main-stop {
+    stop-color: var(--color-orange-primary);
+}
+svg.animatedStack .alt-stop {
+    stop-color: var(--color-orange-secondary);
+}
+
+svg.animatedStack {
+    cursor: pointer;
+    fill: url(#gradient);
+}
+
+svg.animatedStack:hover rect {
+    animation-duration: 0.5s;
+    animation-name: fadein;
+}
+
+#stack1 {
+    animation-delay: 0.375s;
+}
+
+#stack2 {
+    animation-delay: 0.25s;
+}
+
+#stack3 {
+    animation-delay: 0.125s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
