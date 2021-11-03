@@ -2,6 +2,7 @@ interface ContactProps {
     Logo: React.FunctionComponent<
         React.SVGProps<SVGSVGElement> & { title?: string | undefined }
     >;
+    id: string;
     url?: string;
     onClick?: Function;
 }
@@ -9,7 +10,7 @@ interface ContactProps {
 const dummy = () => {};
 const logoHeight = "24";
 
-const Contact = ({ Logo, url, onClick }: ContactProps) => {
+const Contact = ({ Logo, id, url, onClick }: ContactProps) => {
     return (
         <a href={url}>
             <Logo
@@ -17,6 +18,7 @@ const Contact = ({ Logo, url, onClick }: ContactProps) => {
                 width={logoHeight}
                 height={logoHeight}
                 onClick={() => (onClick || dummy)()}
+                id={id}
             />
         </a>
     );

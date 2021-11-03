@@ -18,18 +18,22 @@ const Socials = () => {
                 <Contact
                     Logo={TwitterLogo}
                     url="https://www.twitter.com/siverooo"
+                    id="socials-twitter-svg"
                 />
                 <Contact
                     Logo={GithubLogo}
                     url="https://www.github.com/siveroo"
+                    id="socials-github-svg"
                 />
                 <Contact
                     Logo={LinkedInLogo}
                     url="https://www.linkedin.com/in/dwi-andhika-380017201/"
+                    id="socials-linkedin-svg"
                 />
                 <Contact
                     Logo={DiscordLogo}
                     onClick={() => discordOnClick("siveroo#0550")}
+                    id="socials-discord-svg"
                 />
             </div>
         </div>
