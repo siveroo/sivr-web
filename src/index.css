@@ -6,6 +6,10 @@
     --color-fg-primary: hsl(0, 0%, 12%);
     --color-tooltip-bg: hsl(0, 0%, 20%);
 
+    --color-button-hover-light: hsl(0, 0%, 18%);
+
+    --color-dialog-bg: rgba(0, 0, 0, 0.5);
+
     --color-white: white;
     --color-orange-primary: #617000;
     --color-orange-secondary: #ff9d42;
@@ -148,6 +152,63 @@ h1.websiteLogo {
     border-color: transparent transparent var(--color-tooltip-bg) transparent;
 }
 
+/* Dialog Box CSS */
+.dialog-box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--color-dialog-bg);
+    z-index: 100;
+}
+
+.dialog-box.enabled {
+    visibility: visible;
+}
+
+.dialog-box.disabled {
+    visibility: hidden;
+}
+
+.dialog-box-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    top: 20%;
+    height: min-content;
+
+    background-color: var(--color-fg-primary);
+    color: white;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+.dialog-box-content > button {
+    margin-left: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 4ch;
+
+    color: white;
+
+    transition: color 0.2s, background-color 0.2s, transform 0.2s;
+}
+
+.dialog-box-content > button:hover,
+.dialog-box-content > button:active {
+    background-color: var(--color-button-hover-light);
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
 /* ============= */
 /* ABOUT SECTION */
 /* ============= */
@@ -174,7 +235,9 @@ h1.websiteLogo {
     column-gap: 12px;
     justify-content: center;
     margin-top: 20px;
+}
 
+.contacts > * {
     cursor: pointer;
 }
 
@@ -185,7 +248,7 @@ h1.websiteLogo {
 
 .contacts > a:hover svg {
     transition: all 0.1s ease-in;
-    transform: translateY(-8px);
+    transform: translateY(-2px);
 }
 
 .contacts > a:hover #socials-twitter-svg > path {
@@ -202,6 +265,39 @@ h1.websiteLogo {
 
 .contacts > a:hover #socials-discord-svg > path {
     fill: var(--color-discord);
+}
+
+/* Discord Dialog Box Clipboard */
+.discord-clipboard-body {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    width: 16rem;
+    align-items: center;
+
+    border: darkslategray solid 2px;
+    border-radius: 8px;
+}
+
+.discord-clipboard-title {
+    margin: 0 0 8px 0;
+}
+
+.discord-clipboard-body > span {
+    margin: 4px 8px;
+    color: gray;
+}
+
+.discord-clipboard-body > svg {
+    justify-self: end;
+    stroke: gray;
+
+    transition: stroke 0.25s ease-in;
+}
+
+.discord-clipboard-body > svg:hover,
+.discord-clipboard-body > svg:active {
+    cursor: pointer;
+    stroke: aqua;
 }
 
 /* Right Section */
@@ -311,7 +407,7 @@ svg.animatedStack:hover rect {
     display: flex;
 }
 
-.skillIcons .wrapper > svg {
+.skillIcons .wrapper > * {
     margin: 4px;
 }
 
@@ -333,6 +429,11 @@ svg.animatedStack:hover rect {
     margin-bottom: 0;
 }
 
+.skillIcons > div:hover {
+    cursor: pointer;
+}
+
 .skillIcons > div:hover .tooltip {
+    cursor: default;
     visibility: visible;
 }
