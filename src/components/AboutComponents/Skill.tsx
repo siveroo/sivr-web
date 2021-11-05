@@ -62,7 +62,7 @@ const Skill = () => {
                         </span>
                         <p>
                             Every projects that i made related to Web
-                            Development/IoT usually involves Node.js. I use it
+                            Development/IoT usually involve Node.js. I use it
                             for the backend of my projects.
                         </p>
                     </Tooltip>
@@ -76,9 +76,9 @@ const Skill = () => {
                         </span>
                         <p>
                             I use React for the frontend of my projects.
-                            However, i also tried to make an online shop website
-                            without any frontend framework whatsoever, and it
-                            was kinda sucks.
+                            <br />
+                            <br />
+                            Currently still learning it.
                         </p>
                     </Tooltip>
                 </div>
