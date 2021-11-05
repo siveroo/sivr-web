@@ -5,12 +5,15 @@ import { ReactComponent as TwitterLogo } from "../../res/logos/twitter.svg";
 import { ReactComponent as GithubLogo } from "../../res/logos/github.svg";
 import { ReactComponent as LinkedInLogo } from "../../res/logos/linkedin.svg";
 import { ReactComponent as DiscordLogo } from "../../res/logos/discord.svg";
+import DiscordClipboard from "./DiscordClipboard";
 
-const discordOnClick = (discordTag: string): void => {
-    navigator.clipboard.writeText(discordTag);
-};
+import { useContext } from "react";
+
+import DialogBoxContext from "../UtilityComponents/DialogBoxContext";
 
 const Socials = () => {
+    const createDialogBox = useContext(DialogBoxContext);
+
     return (
         <div className="socials">
             <img src={profilePic} width="270" height="270" alt="Profile" />
@@ -32,7 +35,13 @@ const Socials = () => {
                 />
                 <Contact
                     Logo={DiscordLogo}
-                    onClick={() => discordOnClick("siveroo#0550")}
+                    onClick={() =>
+                        createDialogBox(
+                            <div>
+                                <DiscordClipboard />
+                            </div>
+                        )
+                    }
                     id="socials-discord-svg"
                 />
             </div>
