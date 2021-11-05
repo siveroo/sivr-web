@@ -7,11 +7,11 @@ const Introduction = () => {
                 <h1>Hi, I’m a Full Stack Web Developer</h1>
                 <p>
                     I am a student from Indonesia. Currently practicing web
-                    development for my career.
+                    development.
                 </p>
                 <p>
                     I started learning basic vanilla HTML, CSS, and JavaScript
-                    on the middle of 2021. Then, i learned to use a
+                    in the middle of 2021. Then, i started to learn how to use a
                     framework/library, mainly React.js, which is the library
                     that i used to make this website.
                 </p>
